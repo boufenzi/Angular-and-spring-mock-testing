@@ -31,9 +31,7 @@ describe('FindAllComponent', () => {
   it('#getEmployees should return expected data', (done) => {
     const expectedData: Employee[] = [
       { id: 1, name: 'Abdel', email: 'a@gmail.com', jobTitle: 'engineer', phoneNumber: '0654215487', imageUrl: 'http://url.com', code: 'AA548789'},
-
     ];
-
     service.getEmployees().subscribe(data => {
         expect(data[0]).toEqual(expectedData[0]);
       done();
