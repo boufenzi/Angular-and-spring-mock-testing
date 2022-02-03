@@ -1,0 +1,62 @@
+<form [formGroup]="employeeForm">
+  <div class="row">
+   <div class="col-12">
+    <label>Name : </label>
+   </div>
+   <div class="col-12">
+    <input type="text" class="form-control"  formControlName="name"/>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <label>Email : </label>
+   </div>
+   <div class="col-12">
+    <input type="text" class="form-control"  formControlName="email"/>
+  </div>
+
+
+  <div class="col-12">
+    <label>Job title : </label>
+   </div>
+   <div class="col-12">
+    <input type="text" class="form-control"  formControlName="jobTitle"/>
+  </div>
+  <div class="col-12">
+    <label>Phone : </label>
+   </div>
+   <div class="col-12">
+    <input type="text" class="form-control"  formControlName="phoneNumber"/>
+  </div>
+
+
+  <div class="col-12">
+    <label>Image : </label>
+   </div>
+   <div class="col-12">
+    <input type="text" class="form-control"  formControlName="imageUrl"/>
+  </div>
+
+  <div class="col-12">
+    <label>Code : </label>
+   </div>
+   <div class="col-12">
+    <input type="text" class="form-control" formControlName="code"/>
+  </div>
+  </div>
+  <div class="clearBoth">&nbsp;</div>
+  <div class="row">
+  <div class="col-2">
+    <button mat-raised-button  color="primary" (click)="onSubmit()">Valider</button>
+  </div>
+  <div class="col-2">
+    <button mat-raised-button  color="warn" (click)="onNoClick()">Close</button>
+  </div>
+</div>
+</form>
+
+<div class="alert alert-success" role="alert" *ngIf="response">
+ {{response | json}}
+</div>
+
+
