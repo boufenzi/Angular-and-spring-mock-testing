@@ -22,7 +22,6 @@ describe('FindAllComponent', () => {
   });
   it('#getEmployees should use GET to retrieve data', () => {
     service.getEmployees().subscribe();
-
     const testRequest = httpTestingController.expectOne('http://localhost:8080/employee/getEmployees');
 
     expect(testRequest.request.method).toEqual('GET');
