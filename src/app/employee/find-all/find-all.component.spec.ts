@@ -37,7 +37,6 @@ describe('FindAllComponent', () => {
       done();
     });
     const testRequest = httpTestingController.expectOne('http://localhost:8080/employee/getEmployees');
-
     testRequest.flush(expectedData);
 });
 
